@@ -1,0 +1,111 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+@keyframes background-color-change {
+  0% {
+    background-color: #9896F0; /* Start color */
+  }
+  50% {
+    background-color: #FBC8D5; /* Middle color */
+  }
+  100% {
+    background-color: #9896F0; /* End color */
+  }
+}
+
+/* Main container styling */
+.container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-position: center;
+  animation: background-color-change 5s infinite alternate;
+}
+
+/* Login box styling */
+.h2 {
+  font-size:2em;
+  color:#fff;
+  text-align:center;
+}
+
+.content {
+  width: 400px;
+  height: 450px;
+  background: transparent;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(15px);
+}
+
+/* Input box styling */
+.input-box {
+  position: relative;
+  width: 310px;
+  margin: 30px 0;
+  border-bottom: 1px solid #fff;
+}
+
+.input-box label {
+  display: block;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #fff;
+
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #fff;
+  padding: 0 35px 0 5px;
+  border-bottom: 1px solid #fff;
+}
+
+/* Button styling */
+.button input {
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #000;
+  font-weight: 500;
+}
+
+/* Responsive styling */
+@media (max-width: 500px) {
+  .content {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    border-radius: 0;
+  }
+
+  .input-box {
+    width: 290px;
+  }
+}

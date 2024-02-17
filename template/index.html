@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Home
+{% endblock %}
+
+    {% block content %}
+      <div class="container">
+        <!-- your other content here -->
+
+        <!-- Video section -->
+        <div class="video-container">
+            <video width="100%" height="auto" controls>
+                <source src="{% static 'images/event.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+      </div>
+{% endblock %}
